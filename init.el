@@ -153,6 +153,10 @@
 			   (c-set-offset 'case-label '+)
 			   ))
 
+(add-hook 'rust-mode-hook (lambda ()
+			    (local-set-key (kbd "RET")
+					   'reindent-then-newline-and-indent)))
+
 (add-hook 'nxml-mode-hook (
 			   lambda ()
 			   (setq tab-width 4)))
@@ -190,7 +194,7 @@
  '(fill-column 80)
  '(package-selected-packages
    (quote
-    (websocket tagedit smex rust-mode rainbow-delimiters projectile paredit nix-mode markdown-mode magit ido-ubiquitous haskell-mode groovy-mode git-rebase-mode git-commit-mode exec-path-from-shell editorconfig clojurescript-mode clojure-mode-extra-font-locking cljdoc cider))))
+    (flycheck-haskell flycheck-clojure flycheck websocket tagedit smex rust-mode rainbow-delimiters projectile paredit nix-mode markdown-mode magit ido-ubiquitous haskell-mode groovy-mode git-rebase-mode git-commit-mode exec-path-from-shell editorconfig clojurescript-mode clojure-mode-extra-font-locking cljdoc cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
