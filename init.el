@@ -198,10 +198,15 @@
  '(fill-column 80)
  '(package-selected-packages
    (quote
-    (intel-hex-mode flycheck-haskell flycheck-clojure flycheck websocket tagedit smex rust-mode rainbow-delimiters projectile paredit nix-mode markdown-mode magit ido-ubiquitous haskell-mode groovy-mode git-rebase-mode git-commit-mode exec-path-from-shell editorconfig clojurescript-mode clojure-mode-extra-font-locking cljdoc cider))))
+    (helm intel-hex-mode flycheck-haskell flycheck-clojure flycheck websocket tagedit smex rust-mode rainbow-delimiters projectile paredit nix-mode markdown-mode magit ido-ubiquitous haskell-mode groovy-mode git-rebase-mode git-commit-mode exec-path-from-shell editorconfig clojurescript-mode clojure-mode-extra-font-locking cljdoc cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(add-to-list 'load-path "~/source/org-redmine/")
+(require 'org-redmine)
+(setq org-redmine-uri "https://redmine.wertschuetz.de")
+(setq org-redmine-auth-netrc-use t)
