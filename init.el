@@ -206,10 +206,11 @@
  ;; If there is more than one, they won't work right.
  )
 
-(add-to-list 'load-path "~/source/org-redmine/")
+(add-to-list 'load-path "~/.emacs.d/org-redmine/")
 (require 'org-redmine)
 (setq org-redmine-uri "https://redmine.wertschuetz.de")
 (setq org-redmine-auth-netrc-use t)
 
+(add-to-list 'load-path "~/.emacs.d/powerline/")
 (require 'powerline)
 (powerline-default-theme)

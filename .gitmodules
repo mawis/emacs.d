@@ -1,3 +1,6 @@
 [submodule "powerline"]
 	path = powerline
 	url = https://github.com/milkypostman/powerline.git
+[submodule "org-redmine"]
+	path = org-redmine
+	url = git://github.com/gongo/org-redmine.git
