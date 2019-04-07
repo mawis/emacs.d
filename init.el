@@ -210,3 +210,6 @@
 (require 'org-redmine)
 (setq org-redmine-uri "https://redmine.wertschuetz.de")
 (setq org-redmine-auth-netrc-use t)
+
+(require 'powerline)
+(powerline-default-theme)
