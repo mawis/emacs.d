@@ -214,3 +214,5 @@
 (add-to-list 'load-path "~/.emacs.d/powerline/")
 (require 'powerline)
 (powerline-default-theme)
+
+(global-set-key (kbd "C-x g") 'magit-status)
