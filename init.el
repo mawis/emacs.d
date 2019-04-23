@@ -214,6 +214,10 @@
 (add-to-list 'load-path "~/.emacs.d/powerline/")
 (require 'powerline)
 (powerline-default-theme)
+(set-face-attribute 'mode-line nil
+		    :foreground "Black"
+		    :background "DarkOrange"
+		    :box nil)
 
 (global-set-key (kbd "C-x g") 'magit-status)
 
