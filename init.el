@@ -154,6 +154,10 @@
 			   ))
 
 (add-hook 'c++-mode-hook (lambda ()
+			   (local-set-key (kbd "C-M-tab")
+					  'clang-format-region)
+			   (local-set-key (kbd "C-c C-f")
+					  'clang-format-buffer)
 			   (setq indent-tabs-mode nil)
 			   (setq tab-width 8)))
 
@@ -169,6 +173,10 @@
 			lambda ()
 			       (setq indent-tabs-mode nil)
 			       (c-set-offset 'case-label '+)
+			       (local-set-key (kbd "C-c i")
+					      'clang-format-region)
+			       (local-set-key (kbd "C-c u")
+					      'clang-format-buffer)
 			       (local-set-key (kbd "RET")
 					      'reindent-then-newline-and-indent)
 			       ))
@@ -222,3 +230,5 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 (evil-mode 1)
+
+(require 'clang-format)
