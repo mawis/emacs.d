@@ -146,7 +146,7 @@
 			   lambda ()
 			   (interactive)
 			   (column-marker-1 70)
-			   (setq tab-width 4)
+			   (setq tab-width 8)
 			   (local-set-key (kbd "RET")
 					  'reindent-then-newline-and-indent)
 			   (c-set-offset 'arglist-intro '+)
@@ -154,8 +154,12 @@
 			   ))
 
 (add-hook 'c++-mode-hook (lambda ()
+			   (local-set-key (kbd "C-M-tab")
+					  'clang-format-region)
+			   (local-set-key (kbd "C-c C-f")
+					  'clang-format-buffer)
 			   (setq indent-tabs-mode nil)
-			   (setq tab-width 4)))
+			   (setq tab-width 8)))
 
 (add-hook 'rust-mode-hook (lambda ()
 			    (local-set-key (kbd "RET")
@@ -163,18 +167,22 @@
 
 (add-hook 'nxml-mode-hook (
 			   lambda ()
-			   (setq tab-width 4)))
+			   (setq tab-width 8)))
 
 (add-hook 'c-mode-hook (
 			lambda ()
 			       (setq indent-tabs-mode nil)
 			       (c-set-offset 'case-label '+)
+			       (local-set-key (kbd "C-c i")
+					      'clang-format-region)
+			       (local-set-key (kbd "C-c u")
+					      'clang-format-buffer)
 			       (local-set-key (kbd "RET")
 					      'reindent-then-newline-and-indent)
 			       ))
 
 (add-hook 'js-mode-hook (lambda ()
-			  (setq tab-width 4)))
+			  (setq tab-width 8)))
 
 ;; Show column numbers in the status line
 (setq column-number-mode t)
@@ -222,3 +230,5 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 (evil-mode 1)
+
+(require 'clang-format)
