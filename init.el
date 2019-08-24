@@ -182,6 +182,13 @@
 (add-hook 'js-mode-hook (lambda ()
 			  (setq tab-width 8)))
 
+(require 'hs-lint)
+
+(add-hook 'haskell-mode-hook (lambda ()
+                               (local-set-key (kbd "C-c l") 'hs-lint)))
+
+
+
 ;; Show column numbers in the status line
 (setq column-number-mode t)
 
