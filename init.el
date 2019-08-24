@@ -8,8 +8,8 @@
 ;             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 ;(add-to-list 'package-archives
 ;             '("tromey" . "http://tromey.com/elpa/") t)
-;(add-to-list 'package-archives
-;             '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			 ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -26,6 +26,11 @@
 ;; makes them available for download.
 (when (not package-archive-contents)
   (package-refresh-contents))
+
+;; https://github.com/flyingmachine/emacs-for-clojure/issues/26
+(defvar ido-cur-item nil)
+(defvar ido-default-item nil)
+(defvar ido-cur-list nil)
 
 ;; The packages you want installed. You can also install these
 ;; manually with M-x package-install
