@@ -12,9 +12,9 @@
              '("melpa" . "https://melpa.org/packages/") t)
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-			 ("marmalade" . "http://marmalade-repo.org/packages/")
-			 ("melpa-stable" .
-			  "http://melpa-stable.milkbox.net/packages/")))
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa-stable" .
+                          "http://melpa-stable.milkbox.net/packages/")))
 
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
@@ -148,44 +148,44 @@
 ;; Special mark for the column 70 in Java code
 (require 'column-marker)
 (add-hook 'java-mode-hook (
-			   lambda ()
-			   (interactive)
-			   (column-marker-1 70)
-			   (setq tab-width 8)
-			   (local-set-key (kbd "RET")
-					  'reindent-then-newline-and-indent)
-			   (c-set-offset 'arglist-intro '+)
-			   (c-set-offset 'case-label '+)
-			   ))
+                           lambda ()
+                           (interactive)
+                           (column-marker-1 70)
+                           (setq tab-width 8)
+                           (local-set-key (kbd "RET")
+                                          'reindent-then-newline-and-indent)
+                           (c-set-offset 'arglist-intro '+)
+                           (c-set-offset 'case-label '+)
+                           ))
 
 (add-hook 'c++-mode-hook (lambda ()
-			   (local-set-key (kbd "C-M-tab")
-					  'clang-format-region)
-			   (local-set-key (kbd "C-c C-f")
-					  'clang-format-buffer)
-			   (setq tab-width 8)))
+                           (local-set-key (kbd "C-M-tab")
+                                          'clang-format-region)
+                           (local-set-key (kbd "C-c C-f")
+                                          'clang-format-buffer)
+                           (setq tab-width 8)))
 
 (add-hook 'rust-mode-hook (lambda ()
-			    (local-set-key (kbd "RET")
-					   'reindent-then-newline-and-indent)))
+                            (local-set-key (kbd "RET")
+                                           'reindent-then-newline-and-indent)))
 
 (add-hook 'nxml-mode-hook (
-			   lambda ()
-			   (setq tab-width 8)))
+                           lambda ()
+                           (setq tab-width 8)))
 
 (add-hook 'c-mode-hook (
-			lambda ()
-			       (c-set-offset 'case-label '+)
-			       (local-set-key (kbd "C-c i")
-					      'clang-format-region)
-			       (local-set-key (kbd "C-c u")
-					      'clang-format-buffer)
-			       (local-set-key (kbd "RET")
-					      'reindent-then-newline-and-indent)
-			       ))
+                        lambda ()
+                               (c-set-offset 'case-label '+)
+                               (local-set-key (kbd "C-c i")
+                                              'clang-format-region)
+                               (local-set-key (kbd "C-c u")
+                                              'clang-format-buffer)
+                               (local-set-key (kbd "RET")
+                                              'reindent-then-newline-and-indent)
+                               ))
 
 (add-hook 'js-mode-hook (lambda ()
-			  (setq tab-width 8)))
+                          (setq tab-width 8)))
 
 (require 'hs-lint)
 
@@ -235,9 +235,9 @@
 (require 'powerline)
 (powerline-default-theme)
 (set-face-attribute 'mode-line nil
-		    :foreground "Black"
-		    :background "DarkOrange"
-		    :box nil)
+                    :foreground "Black"
+                    :background "DarkOrange"
+                    :box nil)
 
 (global-set-key (kbd "C-x g") 'magit-status)
 
