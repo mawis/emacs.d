@@ -244,3 +244,5 @@
 (evil-mode 1)
 
 (require 'clang-format)
+
+(add-hook 'purescript-mode-hook 'turn-on-purescript-indentation)
