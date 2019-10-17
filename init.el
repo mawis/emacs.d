@@ -159,9 +159,9 @@
                            ))
 
 (add-hook 'c++-mode-hook (lambda ()
-                           (local-set-key (kbd "C-M-tab")
+                           (local-set-key (kbd "C-c i")
                                           'clang-format-region)
-                           (local-set-key (kbd "C-c C-f")
+                           (local-set-key (kbd "C-c u")
                                           'clang-format-buffer)
                            (setq tab-width 8)))
 
@@ -218,7 +218,7 @@
  '(fill-column 80)
  '(package-selected-packages
    (quote
-    (psci fsharp-mode go-mode erlang nix-buffer evil helm intel-hex-mode flycheck-haskell flycheck-clojure flycheck websocket tagedit smex rust-mode rainbow-delimiters projectile paredit nix-mode markdown-mode magit ido-ubiquitous haskell-mode groovy-mode git-rebase-mode git-commit-mode exec-path-from-shell editorconfig clojurescript-mode clojure-mode-extra-font-locking cljdoc cider))))
+    (fcitx psci fsharp-mode go-mode erlang nix-buffer evil helm intel-hex-mode flycheck-haskell flycheck-clojure flycheck websocket tagedit smex rust-mode rainbow-delimiters projectile paredit nix-mode markdown-mode magit ido-ubiquitous haskell-mode groovy-mode git-rebase-mode git-commit-mode exec-path-from-shell editorconfig clojurescript-mode clojure-mode-extra-font-locking cljdoc cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -246,3 +246,6 @@
 (require 'clang-format)
 
 (add-hook 'purescript-mode-hook 'turn-on-purescript-indentation)
+
+(fcitx-aggressive-setup)
+(setq fcitx-use-dbus t)
